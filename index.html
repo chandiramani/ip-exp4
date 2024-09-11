@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T-Shirt Order Page</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container my-5">
+        <h1 class="text-center mb-4">Order Your Custom T-Shirt</h1>
+        <form id="orderForm" onsubmit="return processOrder()">
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" id="name" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="mobile" class="form-label">Mobile Number</label>
+                <input type="text" id="mobile" class="form-control" maxlength="10" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="message" class="form-label">Message on T-Shirt</label>
+                <textarea id="message" class="form-control" maxlength="100" rows="3" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit Order</button>
+        </form>
+
+        <div id="receipt" class="mt-5" style="display: none;">
+            <h2>Order Receipt</h2>
+            <p id="receiptDetails"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
